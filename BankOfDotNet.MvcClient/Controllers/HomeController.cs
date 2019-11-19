@@ -7,6 +7,7 @@ using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Logging;
 using BankOfDotNet.MvcClient.Models;
 using Microsoft.AspNetCore.Authorization;
+using Microsoft.AspNetCore.Authentication;
 
 namespace BankOfDotNet.MvcClient.Controllers
 {
@@ -33,6 +34,12 @@ namespace BankOfDotNet.MvcClient.Controllers
         public IActionResult Secure() 
         {
             return View();
+        }
+
+        public async Task Logout() 
+        {
+            await HttpContext.SignOutAsync("Cookies");
+            await HttpContext.SignOutAsync("oidc");
         }
 
         [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]

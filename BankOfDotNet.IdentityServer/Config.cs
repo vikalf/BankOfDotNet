@@ -85,6 +85,23 @@ namespace BankOfDotNet.IdentityServer
                         IdentityServerConstants.StandardScopes.OpenId,
                         IdentityServerConstants.StandardScopes.Profile
                     }
+                },
+
+                // Implicit Flow Grant Type
+                new Client
+                {
+                    ClientId = "swagger",
+                    ClientName = "My Swagger API UI",
+                    AllowedGrantTypes = GrantTypes.Implicit,
+                    RedirectUris = { "http://localhost:5001/swagger/oauth2-redirect.html/" },
+                     PostLogoutRedirectUris = { "http://localhost:5001/swagger" },
+                     AllowedScopes =  new List<string>
+                    {
+                        IdentityServerConstants.StandardScopes.OpenId,
+                        IdentityServerConstants.StandardScopes.Profile,
+                        "bankOfDotNetApi"
+                    },
+                     AllowAccessTokensViaBrowser = true
                 }
 
             };

@@ -55,10 +55,9 @@ namespace BankOfDotNet.MvcClient
             app.UseStaticFiles();
 
             app.UseRouting();
-
-            app.UseAuthorization();
-            app.UseCookiePolicy();
             app.UseAuthentication();
+            app.UseAuthorization();
+            app.UseCookiePolicy();            
             app.UseEndpoints(endpoints =>
             {
                 endpoints.MapControllerRoute(
