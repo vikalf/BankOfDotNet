@@ -1,0 +1,195 @@
+{
+	"info": {
+		"_postman_id": "44299377-0737-4775-9c2f-0d5c58b867a7",
+		"name": "BankingApplication",
+		"description": "BankOfDotNet Web API\n\nEndpoint:\n\nGetAllCustomers api/Customers GET\nGetSpecificCustomer api/Customers/3 GET\nUpdateCustomer api/customer/3 PUT CustomerObj\nCreateCustomer api/Customer POST CustomerObj\nDeleteCustomer api/Customer/3 DELETE",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "http://localhost:56909/api/customers",
+			"event": [
+				{
+					"listen": "prerequest",
+					"script": {
+						"id": "1b7c7ab2-e90f-4fd6-8043-0ed3eed24e62",
+						"exec": [
+							""
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:56909/api/customers",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "56909",
+					"path": [
+						"api",
+						"customers"
+					]
+				},
+				"description": "Get All Customers"
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:56909/api/customers/{id}",
+			"event": [
+				{
+					"listen": "prerequest",
+					"script": {
+						"id": "1b7c7ab2-e90f-4fd6-8043-0ed3eed24e62",
+						"exec": [
+							""
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:56909/api/customers/3",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "56909",
+					"path": [
+						"api",
+						"customers",
+						"3"
+					]
+				},
+				"description": "Get All Customers"
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:56909/api/customers",
+			"event": [
+				{
+					"listen": "prerequest",
+					"script": {
+						"id": "1b7c7ab2-e90f-4fd6-8043-0ed3eed24e62",
+						"exec": [
+							""
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "POST",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:56909/api/customers",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "56909",
+					"path": [
+						"api",
+						"customers"
+					]
+				},
+				"description": "Get All Customers"
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:56909/api/customers/{id}",
+			"event": [
+				{
+					"listen": "prerequest",
+					"script": {
+						"id": "1b7c7ab2-e90f-4fd6-8043-0ed3eed24e62",
+						"exec": [
+							""
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"id\": 3,\r\n    \"firstName\": \"Rosalba\",\r\n    \"lastName\": \"Martinez_Updated\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:56909/api/customers/3",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "56909",
+					"path": [
+						"api",
+						"customers",
+						"3"
+					]
+				},
+				"description": "Get All Customers"
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:56909/api/customers/{id} Copy",
+			"event": [
+				{
+					"listen": "prerequest",
+					"script": {
+						"id": "1b7c7ab2-e90f-4fd6-8043-0ed3eed24e62",
+						"exec": [
+							""
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:56909/api/customers/3",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "56909",
+					"path": [
+						"api",
+						"customers",
+						"3"
+					]
+				},
+				"description": "Get All Customers"
+			},
+			"response": []
+		}
+	],
+	"protocolProfileBehavior": {}
+}
